@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finanças Rápidas</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+    <h1>Finanças Rápidas</h1>
+    <nav>
+        <a href="#cotacao">Cotação</a>
+        <a href="#conversor">Conversor</a>
+        <a href="#calculadora">Calculadora</a>
+        <a href="#dicas">Dicas</a>
+    </nav>
+</header>
+
+<section id="cotacao">
+    <h2>Cotação em Tempo Real</h2>
+    <div class="cotacao">
+        <div class="cotacao-item">
+            <span>Bitcoin (BTC)</span>
+            <span id="btc">R$ 0</span>
+        </div>
+        <div class="cotacao-item">
+            <span>Ethereum (ETH)</span>
+            <span id="eth">R$ 0</span>
+        </div>
+        <div class="cotacao-item">
+            <span>Ação ITUB4</span>
+            <span id="acao">R$ 0</span>
+        </div>
+    </div>
+
+
+    <!-- Gráfico interativo -->
+    <div style="position:relative; height:400px; margin-top:30px;">
+        <canvas id="graficoCotacoes"></canvas>
+    </div>
+
+    <div class="adsense">
+        <!-- Banner AdSense -->
+        Banner AdSense
+    </div>
+</section>
+
+<section id="conversor">
+    <h2>Conversor de Moedas</h2>
+    <input type="number" id="valor" placeholder="Digite o valor em USD">
+    <button onclick="converter()">Converter para BRL</button>
+    <p>Resultado: <span id="resultado">R$ 0</span></p>
+
+    <div class="adsense">
+        Banner AdSense
+    </div>
+</section>
+
+<section id="calculadora">
+    <h2>Calculadora Financeira</h2>
+    <input type="number" id="principal" placeholder="Valor principal (R$)">
+    <input type="number" id="taxa" placeholder="Taxa de juros mensal (%)">
+    <input type="number" id="meses" placeholder="Período (meses)">
+    <button onclick="calcular()">Calcular Montante</button>
+    <p>Montante: <span id="montante">R$ 0</span></p>
+
+    <div class="adsense">
+        Banner AdSense
+    </div>
+</section>
+
+<section id="dicas">
+    <h2>Dicas Rápidas e Notícias</h2>
+    <div class="noticia">📈 Bitcoin subiu 2% nas últimas 24h.</div>
+    <div class="noticia">💡 Dica: Diversifique seus investimentos para reduzir riscos.</div>
+    <div class="noticia">📰 Ação ITUB4 fechou em alta hoje.</div>
+
+    <div class="adsense">
+        Banner AdSense
+    </div>
+</section>
+
+<footer>
+    <p>© 2025 Finanças Rápidas | <a href="#" style="color:#fff;">Política de Privacidade</a></p>
+</footer>
+
+<!-- Chart.js -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
