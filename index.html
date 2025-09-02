@@ -20,29 +20,43 @@
 
 <section id="cotacao">
     <h2>Cotação em Tempo Real</h2>
-    <div class="cotacao">
-        <div class="cotacao-item">
-            <span>Bitcoin (BTC)</span>
-            <span id="btc">R$ 0</span>
-        </div>
-        <div class="cotacao-item">
-            <span>Ethereum (ETH)</span>
-            <span id="eth">R$ 0</span>
-        </div>
-        <div class="cotacao-item">
-            <span>Ação ITUB4</span>
-            <span id="acao">R$ 0</span>
-        </div>
+
+    <div class="currency-selector">
+        <span>Exibir preços em:</span>
+        <button id="btn-brl" class="currency-btn active">BRL (R$)</button>
+        <button id="btn-usd" class="currency-btn">USD ($)</button>
+    </div>
+    
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Nome</th>
+                    <th>Preço</th>
+                    <th>24h %</th>
+                    <th>7d %</th>
+                </tr>
+            </thead>
+            <tbody id="cotacoes-body">
+                </tbody>
+        </table>
     </div>
 
+    <h2 style="margin-top: 40px;">Gráfico Histórico (BTC, ETH, ITUB4)</h2>
+    <div id="period-selector">
+        <button class="period-btn active" data-period="24h">24h</button>
+        <button class="period-btn" data-period="7d">7d</button>
+        <button class="period-btn" data-period="1m">1m</button>
+        <button class="period-btn" data-period="6m">6m</button>
+        <button class="period-btn" data-period="1y">1a</button>
+    </div>
 
-    <!-- Gráfico interativo -->
-    <div style="position:relative; height:400px; margin-top:30px;">
+    <div style="position:relative; height:400px; margin-top:20px;">
         <canvas id="graficoCotacoes"></canvas>
     </div>
 
     <div class="adsense">
-        <!-- Banner AdSense -->
         Banner AdSense
     </div>
 </section>
@@ -86,8 +100,8 @@
     <p>© 2025 Finanças Rápidas | <a href="#" style="color:#fff;">Política de Privacidade</a></p>
 </footer>
 
-<!-- Chart.js -->
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns"></script>
 <script src="js/main.js"></script>
 </body>
 </html>
